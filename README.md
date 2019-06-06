@@ -8,7 +8,7 @@ Adv. blocker uses [@StevenBlack](https://github.com/StevenBlack) host file.
 [Release page](https://github.com/pantsufan/adblocking-module/releases)
 
 # Updates
-Whenever Steven updates his host file I would update mu module.
+Whenever Steven updates his host file I would update my module.
 
 # Credits
 - [@StevenBlack](https://github.com/StevenBlack) for host file.
