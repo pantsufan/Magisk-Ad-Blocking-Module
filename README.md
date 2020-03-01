@@ -1,3 +1,4 @@
+# (Updates are stopped temporarily)
 # Advertisement Blocker
 Adv. blocker uses [@StevenBlack](https://github.com/StevenBlack) host file.
 
