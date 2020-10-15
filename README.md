@@ -1,20 +1,24 @@
 <p align="center">
-  <img src="https://33.media.tumblr.com/265b7eb306b414deaeaa247b7a22adef/tumblr_mj5ttltf8r1qgpubfo1_500.gif">
+  <img src="https://raw.githubusercontent.com/topjohnwu/Magisk/master/docs/images/logo.png">
 </p>
 
-# Advertisement Blocker
-Adv. blocker uses [@StevenBlack](https://github.com/StevenBlack) host file.
+# A Magsik Advertisement Blocker Module
+The module was made for personal use but since it was really good for daily use I decided to make it public.
 
 # Features
-- Uses Unified hosts + fakenews + gambling + porn host file
+- Blocks Ads
+- Blocks Porn Sites
+- Blocks Android Apps Ads
 
 # Download
 [Release page](https://github.com/pantsufan/adblocking-module/releases)
 
 # Updates
-Whenever Steven updates his host file I would update my module.
+The module would be updated if there are any major changes to the host file.
 
 # Credits
-- [@StevenBlack](https://github.com/StevenBlack) for host file.
-- My old project which is private now. (My own host file)
-- [@topjohnwu](https://github.com/topjohnwu) for Magisk Template.
+- [@topjohnwu](https://github.com/topjohnwu) for Magisk.
+- [@Zackptg5](https://github.com/Zackptg5/MMT-Extended) For Magisk Template
+- [Dan Pollock](https://someonewhocares.org/hosts/zero/) For Amazing Host File
+- [@kaabir](https://github.com/kaabir/AdBlock_Hosts) For Android Host File
+- [@EnergizedProtection](https://github.com/EnergizedProtection/block) For Providing Additional Host Files
