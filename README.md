@@ -1,4 +1,6 @@
-# (Updates are stopped temporarily)
+{: style="text-align:center"}
+![Ninja](https://33.media.tumblr.com/265b7eb306b414deaeaa247b7a22adef/tumblr_mj5ttltf8r1qgpubfo1_500.gif)
+
 # Advertisement Blocker
 Adv. blocker uses [@StevenBlack](https://github.com/StevenBlack) host file.
 
