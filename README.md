@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/topjohnwu/Magisk/master/docs/images/logo.png">
 </p>
 
-# A Magsik Advertisement Blocker Module
+# A Magisk Advertisement Blocker Module
 The module was made for personal use but since it was really good for daily use I decided to make it public.
 
 # Features
