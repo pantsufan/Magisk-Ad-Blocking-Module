@@ -22,6 +22,5 @@ The module would be updated if there are any major changes to the host file.
 # Credits
 - [@topjohnwu](https://github.com/topjohnwu) for Magisk.
 - [@Zackptg5](https://github.com/Zackptg5/MMT-Extended) For Magisk Template
-- [Dan Pollock](https://someonewhocares.org/hosts/zero/) For Amazing Host File
-- [@kaabir](https://github.com/kaabir/AdBlock_Hosts) For Android Host File
 - [@EnergizedProtection](https://github.com/EnergizedProtection/block) For Providing Additional Host Files
+- [OISD](https://oisd.nl/) For Host File
