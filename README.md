@@ -5,6 +5,10 @@
 # A Magisk Advertisement Blocker Module
 The module was made for personal use but since it was really good for daily use I decided to make it public.
 
+![Downloads](https://shields.io/github/downloads/pantsufan/Magisk-Ad-Blocking-Module/total?style=for-the-badge)
+![Release](https://shields.io/github/v/release/pantsufan/Magisk-Ad-Blocking-Module?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/pantsufan/Magisk-Ad-Blocking-Module?style=for-the-badge)
+
 # Features
 - Blocks Ads
 - Blocks Porn Sites
