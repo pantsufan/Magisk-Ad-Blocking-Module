@@ -1,0 +1,141 @@
+.myButton {
+  background-color: #00b144;
+  border-radius: 28px;
+  border: 1px solid #00b144;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #00b144;
+  outline-style: none;
+}
+.myButton:hover {
+  background-color: #019530;
+  outline-style: none;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+  outline-style: none;
+}
+.accordion {
+  box-sizing: border-box;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion-select {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.accordion-title {
+  position: relative;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+  border: 1px solid transparent;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.accordion-title span {
+  bottom: 0px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.accordion-content {
+  box-sizing: border-box;
+  overflow: auto;
+  position: relative;
+  transition: margin 0.3s ease 0.1s;
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+/* Generated styles starts here */
+
+.accordion {
+  border-color: #dedede;
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 0px;
+  flex-direction: column;
+  height: auto;
+}
+
+.accordion-title,
+.accordion-select {
+  background-color: #dbffe8;
+  color: #00b144;
+  width: 100%;
+  height: 65px;
+  font-size: 18px;
+}
+
+.accordion-select {
+  margin-bottom: -65px;
+  margin-right: -65px;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+  border-bottom-color: #15ff58;
+  border-right-color: transparent;
+}
+
+.accordion-select:hover + .accordion-title,
+.accordion-select:checked + .accordion-title {
+  background-color: #9dffa5;
+}
+
+.accordion-title span {
+  transform: rotate(0deg);
+  -ms-writing-mode: lr-tb;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  padding-left: 33px;
+  padding-right: 33px;
+  line-height: 65px;
+}
+
+.accordion-content {
+  background-color: #f7f7f7;
+  color: #7f8787;
+  height: 80px;
+  margin-bottom: -80px;
+  margin-right: 0;
+  padding: 12px;
+  width: 100%;
+  text-align: justify;
+}
+
+#header {
+  text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #121212;
+  }
+
+  a {
+    color: #809fff;
+  }
+}
