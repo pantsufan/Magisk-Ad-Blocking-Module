@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/topjohnwu/Magisk/master/docs/images/logo.png">
+  <img src="logo.png">
 </p>
 
 # A Magisk Advertisement Blocker Module
@@ -28,3 +28,5 @@ The module would be updated if there are any major changes to the host file.
 - [@Zackptg5](https://github.com/Zackptg5/MMT-Extended) For Magisk Template
 - [@EnergizedProtection](https://github.com/EnergizedProtection/block) For Providing Additional Host Files
 - [OISD](https://oisd.nl/) For Host File
+- [1Hosts](https://github.com/badmojr/1Hosts)
+- [Anti-Porn](https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File/)
