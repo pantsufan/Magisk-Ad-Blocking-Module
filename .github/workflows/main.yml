@@ -1,0 +1,75 @@
+name: BlockAds
+
+on: 
+  workflow_dispatch:
+    inputs:
+      versionLevel:
+        description: 'Version Number'     
+        required: true
+      changeLog:
+        description: 'Changelog'
+        required: true
+        default: 'Update'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Temp Folder
+        run: mkdir downloads
+        
+      - name: Start Building
+        run:  |
+          cd downloads
+          wget https://hosts.oisd.nl/
+          mv index.html hosts
+          wget https://o0.pages.dev/Lite/hosts.txt
+          sed '1,33d' hosts.txt >> hosts
+          rm hosts.txt
+          wget https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt
+          cat HOSTS.txt >> hosts
+          wget https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/v3.8/BlockAds-v3.8.zip
+          echo "showing files"
+          unzip -d ZIP BlockAds-v3.8.zip
+          echo "Show"
+          dir
+          echo "Host file created"
+          cp -u hosts ZIP/system/etc/
+          cd ZIP
+          echo "id=SH_Blocker
+          name=BlockADs
+          version=v${{ github.event.inputs.versionLevel }}
+          versionCode=7
+          author=Kninja
+          description=🔥️ Say Goodbye To Ads Forever" > module.prop
+          zip -r BlockAds-v${{ github.event.inputs.versionLevel }}.zip *
+          mkdir temp
+          mv BlockAds-v${{ github.event.inputs.versionLevel }}.zip temp
+          cd ..
+          echo "Build Done"
+        
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.event.inputs.versionLevel }}
+          release_name: BlockAds Module
+          body: |
+            # Changelog
+            - ${{ github.event.inputs.changeLog }}
+          draft: false
+          prerelease: false
+          
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./downloads/ZIP/temp/BlockAds-v${{ github.event.inputs.versionLevel }}.zip
+          asset_name: BlockAds-v${{ github.event.inputs.versionLevel }}.zip
+          asset_content_type: application/zip
+        
