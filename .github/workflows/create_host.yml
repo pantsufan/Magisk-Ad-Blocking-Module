@@ -1,0 +1,37 @@
+name: Host
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        
+      - name: Start Building
+        run:  |
+          wget https://hosts.oisd.nl/
+          mv index.html hosts
+          wget https://o0.pages.dev/Lite/hosts.txt
+          sed '1,33d' hosts.txt >> hosts
+          rm hosts.txt
+          wget https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt
+          cat HOSTS.txt >> hosts
+          rm HOSTS.txt
+        
+      - name: setup git config
+        run: |
+          git config user.name "pantsufan"
+          git config user.email "joel28@protonmail.com"
+          
+      - name: commit
+        run: |
+          # Stage the file, commit and push
+          git add hosts
+          git commit -m "Host File Updated"
+          git push origin master
+        
