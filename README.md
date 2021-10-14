@@ -19,6 +19,7 @@ The module was made for personal use but since it was really good for daily use 
 # Download
 - [Magisk Module](https://github.com/pantsufan/adblocking-module/releases)
 - [Non Rooted Device?](https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/tag/1.0)
+- [Version Without Porn Block](https://github.com/pantsufan/BlockAds)
 
 # Updates
 The module would be updated if there are any major changes to the host file.
