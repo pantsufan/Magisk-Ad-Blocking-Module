@@ -28,6 +28,8 @@ jobs:
           rm hosts.txt
           wget https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt
           cat HOSTS.txt >> hosts
+          wget https://gist.githubusercontent.com/pantsufan/ba4762d25de269dcdaa9f692ea6f9f5c/raw/ms_adblock.txt
+          cat ms_adblock.txt >> hosts
           wget https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/v3.8/BlockAds-v3.8.zip
           echo "showing files"
           unzip -d ZIP BlockAds-v3.8.zip
