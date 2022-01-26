@@ -29,7 +29,7 @@ jobs:
           wget https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts
           cat pornography-hosts >> hosts
           rm pornography-hosts
-          wget https://gist.githubusercontent.com/pantsufan/ba4762d25de269dcdaa9f692ea6f9f5c/raw/ms_adblock.txt
+          wget https://gist.githubusercontent.com/pantsufan/ba4762d25de269dcdaa9f692ea6f9f5c/raw/9882032fa57fe910260d00fa959a80e0b05c2300/ms_adblock.txt
           cat ms_adblock.txt >> hosts
           wget https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/v3.8/BlockAds-v3.8.zip
           echo "showing files"
