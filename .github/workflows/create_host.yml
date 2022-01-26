@@ -19,8 +19,9 @@ jobs:
           wget https://o0.pages.dev/Lite/hosts.txt
           sed '1,33d' hosts.txt >> hosts
           rm hosts.txt
-          wget https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt
-          cat HOSTS.txt >> hosts
+          wget https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts
+          cat pornography-hosts >> hosts
+          rm pornography-hosts
           wget https://gist.githubusercontent.com/pantsufan/ba4762d25de269dcdaa9f692ea6f9f5c/raw/ms_adblock.txt
           cat ms_adblock.txt >> hosts
           rm HOSTS.txt
