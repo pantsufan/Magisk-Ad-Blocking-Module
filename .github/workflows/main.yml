@@ -26,6 +26,8 @@ jobs:
           wget https://o0.pages.dev/Lite/hosts.txt
           sed '1,33d' hosts.txt >> hosts
           rm hosts.txt
+          wget https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/hosts.txt
+          cat hosts.txt >> hosts
           wget https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts
           cat pornography-hosts >> hosts
           rm pornography-hosts
