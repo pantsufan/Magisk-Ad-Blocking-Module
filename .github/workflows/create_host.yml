@@ -14,8 +14,8 @@ jobs:
         
       - name: Start Building
         run:  |
-          wget https://hosts.oisd.nl/
-          mv index.html hosts
+          echo "Satrting...."
+          wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
           wget https://o0.pages.dev/Lite/hosts.txt
           sed '1,33d' hosts.txt >> hosts
           rm hosts.txt
@@ -28,13 +28,7 @@ jobs:
           cat hosts >> og_hosts
           mv og_hosts hosts
           rm hosts.txt
-          wget https://raw.githubusercontent.com/AdroitAdorKhan/EnergizedProtection/master/core/hosts-porn
-          sed '1,52d' hosts-porn >> hosts.txt
-          cat hosts.txt >> hosts
-          rm hosts.txt
-          wget https://gist.githubusercontent.com/pantsufan/ba4762d25de269dcdaa9f692ea6f9f5c/raw/9882032fa57fe910260d00fa959a80e0b05c2300/ms_adblock.txt
-          cat ms_adblock.txt >> hosts
-          rm ms_adblock.txt
+          echo "Done Building!"
         
       - name: setup git config
         run: |
