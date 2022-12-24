@@ -41,6 +41,7 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
+          git rm hosts
           git add hosts
           git commit -m "Host File Updated"
           git push origin master
