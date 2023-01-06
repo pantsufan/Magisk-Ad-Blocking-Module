@@ -21,26 +21,23 @@ jobs:
       - name: Start Building
         run:  |
           cd downloads
-          wget https://hosts.oisd.nl/
-          mv index.html hosts
+          wget https://hblock.molinero.dev/hosts
           wget https://o0.pages.dev/Lite/hosts.txt
           sed '1,33d' hosts.txt >> hosts
           rm hosts.txt
           wget https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/hosts.txt
           cat hosts.txt >> hosts
+          rm hosts.txt
           mv hosts og_hosts
-          wget https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
+          wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts
           mv hosts hosts.txt
-          sed '1,12d' hosts.txt >> hosts
+          sed '1,40d' hosts.txt >> hosts
           cat hosts >> og_hosts
           mv og_hosts hosts
           rm hosts.txt
-          wget https://raw.githubusercontent.com/AdroitAdorKhan/EnergizedProtection/master/core/hosts-porn
-          sed '1,52d' hosts-porn >> hosts.txt
-          cat hosts.txt >> hosts
-          rm hosts.txt
-          wget https://gist.githubusercontent.com/pantsufan/ba4762d25de269dcdaa9f692ea6f9f5c/raw/9882032fa57fe910260d00fa959a80e0b05c2300/ms_adblock.txt
-          cat ms_adblock.txt >> hosts
+          sed -i "/s.youtube.com/d" hosts
+          sed -i "/s2.youtube.com/d" hosts
+          echo "Done Building!"
           wget https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/v3.8/BlockAds-v3.8.zip
           echo "showing files"
           unzip -d ZIP BlockAds-v3.8.zip
