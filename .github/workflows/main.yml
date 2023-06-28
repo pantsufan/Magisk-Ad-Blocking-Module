@@ -38,9 +38,9 @@ jobs:
           sed -i "/s.youtube.com/d" hosts
           sed -i "/s2.youtube.com/d" hosts
           echo "Done Building!"
-          wget https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/v3.8/BlockAds-v3.8.zip
+          wget https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/v3.16/BlockAds-v3.16.zip
           echo "showing files"
-          unzip -d ZIP BlockAds-v3.8.zip
+          unzip -d ZIP BlockAds-v3.16.zip
           echo "Show"
           dir
           echo "Host file created"
