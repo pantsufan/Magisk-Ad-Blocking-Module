@@ -27,22 +27,13 @@ jobs:
       - name: Start Building
         run:  |
           echo "Starting...."
-          wget https://hblock.molinero.dev/hosts
-          wget https://o0.pages.dev/Lite/hosts.txt
-          sed '1,33d' hosts.txt >> hosts
-          rm hosts.txt
+          wget https://raw.githubusercontent.com/pantsufan/Project-Lite/main/hosts
           wget https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/hosts.txt
           cat hosts.txt >> hosts
           rm hosts.txt
-          mv hosts og_hosts
-          wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts
-          mv hosts hosts.txt
-          sed '1,40d' hosts.txt >> hosts
-          cat hosts >> og_hosts
-          mv og_hosts hosts
-          rm hosts.txt
-          sed -i "/s.youtube.com/d" hosts
-          sed -i "/s2.youtube.com/d" hosts
+          wget https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt
+          cat HOSTS.txt >> hosts
+          rm HOSTS.txt
           echo "Done Building!"
         
       - name: commit
