@@ -21,7 +21,7 @@ jobs:
       run: |
           git rm hosts
           git commit -m "Removed Host File"
-          git push origin main
+          git push origin master
     
     - name: Set up environment
       run: |
@@ -99,4 +99,4 @@ jobs:
       run: |
         git add hosts
         git commit -m "Update hosts file"
-        git push origin main
+        git push origin master
