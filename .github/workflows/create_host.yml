@@ -51,6 +51,7 @@ jobs:
         sed -i "1,15d" d3host.txt
         sed -i "/^$/d" d3host.txt
         sed -i "/^#/d" d3host.txt
+        sed -i '1 i\ ' d3host.txt
         cat d3host.txt >> adguard
         rm d3host.txt
         cat adguard >> adaway
