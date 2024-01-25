@@ -30,45 +30,27 @@ jobs:
 
     - name: Download converter.php
       run: |
-        curl -o converter.php https://gist.githubusercontent.com/pantsufan/e4b8876154d1436d8b13743bb07f3a8a/raw/converter.php
+        curl -o converter.php https://gist.githubusercontent.com/pantsufan/e4b8876154d1436d8b13743bb07f3a8a/raw/5a87050d72ce1392e829b8975aeb5e3776397b5c/converter.php
 
     - name: Run Script
       run: |
         echo "Project Lite"
-        curl -O https://adaway.org/hosts.txt
-        sed "1,24d" hosts.txt >> adaway
-        rm hosts.txt
-        sed -i -e "s/[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}/0.0.0.0/g" adaway
-        sed -i "/^$/d" adaway
-        sed -i "/^#/d" adaway
         php converter.php
         sed -i "1,6d" AdguardMobileAds.txt
+        sed -i "1,6d" OISD.txt
         sed -i "1,6d" AdguardMobileSpyware.txt
-        cat AdguardMobileSpyware.txt >> AdguardMobileAds.txt
+        echo "" >> OISD.txt
+        cat AdguardMobileSpyware.txt >> OISD.txt
+        echo "" >> OISD.txt
+        cat AdguardMobileAds.txt >> OISD.txt
+        rm AdguardMobileAds.txt
         rm AdguardMobileSpyware.txt
-        mv AdguardMobileAds.txt adguard
-        curl -O https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt
-        sed -i "1,15d" d3host.txt
-        sed -i "/^$/d" d3host.txt
-        sed -i "/^#/d" d3host.txt
-        sed -i '1 i\ ' d3host.txt
-        cat d3host.txt >> adguard
-        rm d3host.txt
-        cat adguard >> adaway
-        awk '!seen[$0]++' adaway > hosts
-        rm adaway
-        rm adguard
-        wget https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/hosts.txt
-        cat hosts.txt >> hosts
-        rm hosts.txt
-        wget https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt
-        sed 's/  */ /' HOSTS.txt > output.txt
-        cat output.txt >> hosts
-        rm HOSTS.txt
-        rm output.txt
-        wget https://gist.githubusercontent.com/pantsufan/2ac3dea8dac14d716e1866e01ca277c7/raw/hosts.txt
-        cat hosts.txt >> hosts
-        rm hosts.txt
+        wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts
+        sed -i "1,32d" hosts
+        echo "" >> OISD.txt
+        cat hosts >> OISD.txt
+        rm hosts
+        mv OISD.txt hosts
         awk '!seen[$0]++' hosts > hosts_filter
         {
           echo "# PROJECT LITE"
