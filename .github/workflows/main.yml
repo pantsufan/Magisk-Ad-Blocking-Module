@@ -1,15 +1,9 @@
 name: BlockAds
 
-on: 
+on:
   workflow_dispatch:
-    inputs:
-      versionLevel:
-        description: 'Version Number'     
-        required: true
-      changeLog:
-        description: 'Changelog'
-        required: true
-        default: 'Update'
+  schedule:
+    - cron: "0 8 1,15 * *"
 
 jobs:
   build:
@@ -17,69 +11,70 @@ jobs:
     steps:
       - name: Create Temp Folder
         run: mkdir downloads
-        
+
       - name: Start Building
-        run:  |
+        run: |
           cd downloads
-          wget https://hblock.molinero.dev/hosts
-          wget https://o0.pages.dev/Lite/hosts.txt
-          sed '1,33d' hosts.txt >> hosts
-          rm hosts.txt
-          wget https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/hosts.txt
-          cat hosts.txt >> hosts
-          rm hosts.txt
-          mv hosts og_hosts
-          wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts
-          mv hosts hosts.txt
-          sed '1,40d' hosts.txt >> hosts
-          cat hosts >> og_hosts
-          mv og_hosts hosts
-          rm hosts.txt
-          sed -i "/s.youtube.com/d" hosts
-          sed -i "/s2.youtube.com/d" hosts
-          echo "Done Building!"
-          wget https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/v3.16/BlockAds-v3.16.zip
-          echo "showing files"
-          unzip -d ZIP BlockAds-v3.16.zip
-          echo "Show"
-          dir
-          echo "Host file created"
+          # Get latest version of BlockAds
+          fileVersion=$(curl -s "https://api.github.com/repos/pantsufan/Magisk-Ad-Blocking-Module/tags" | jq -r '.[0].name')
+          echo $fileVersion
+          fileName="BlockAds-$fileVersion.zip"
+          echo $fileName
+          fileURL="https://github.com/pantsufan/Magisk-Ad-Blocking-Module/releases/download/$fileVersion/$fileName"
+          wget -q $fileURL
+          unzip -d ZIP $fileName
+          wget -q https://raw.githubusercontent.com/pantsufan/Magisk-Ad-Blocking-Module/master/hosts
           cp -u hosts ZIP/system/etc/
+          rm hosts
+          rm $fileName
           cd ZIP
+          # Change version number
+          currentVersion=$fileVersion
+          # Extract the major and minor version components
+          major=$(echo "$currentVersion" | awk -F'.' '{print substr($1,2)}')
+          minor=$(echo "$currentVersion" | awk -F'.' '{print $2}')
+          # Increment the minor version, and reset to 0 if it reaches 99
+          minor=$((minor + 1))
+          if [ "$minor" -eq 100 ]; then
+            minor=0
+            major=$((major + 1))
+          fi
+          # Format the new version
+          newVersion="v${major}.${minor}"
           echo "id=SH_Blocker
           name=BlockADs
-          version=v${{ github.event.inputs.versionLevel }}
+          version=$newVersion
           versionCode=7
           author=Kninja
           description=🔥️ Say Goodbye To Ads Forever" > module.prop
-          zip -r BlockAds-v${{ github.event.inputs.versionLevel }}.zip *
+          zip -r BlockAds-$newVersion.zip *
           mkdir temp
-          mv BlockAds-v${{ github.event.inputs.versionLevel }}.zip temp
+          mv BlockAds-$newVersion.zip temp
           cd ..
           echo "Build Done"
-        
+          echo newVersion=${newVersion} >> $GITHUB_ENV
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ github.event.inputs.versionLevel }}
+          tag_name: ${{ env.newVersion }}
           release_name: BlockAds Module
           body: |
             # Changelog
-            - ${{ github.event.inputs.changeLog }}
+            - Updated Hosts File
           draft: false
           prerelease: false
-          
+
       - name: Upload Release Asset
-        id: upload-release-asset 
+        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./downloads/ZIP/temp/BlockAds-v${{ github.event.inputs.versionLevel }}.zip
-          asset_name: BlockAds-v${{ github.event.inputs.versionLevel }}.zip
+          asset_path: ./downloads/ZIP/temp/BlockAds-${{ env.newVersion }}.zip
+          asset_name: BlockAds-${{ env.newVersion }}.zip
           asset_content_type: application/zip
-        
