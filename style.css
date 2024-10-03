@@ -1,3 +1,7 @@
+body, html {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
 .myButton {
   background-color: #00b144;
   border-radius: 28px;
@@ -5,7 +9,7 @@
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 17px;
   padding: 16px 31px;
   text-decoration: none;
@@ -24,7 +28,7 @@
 .accordion {
   box-sizing: border-box;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   overflow: hidden;
   width: 100%;
 }
