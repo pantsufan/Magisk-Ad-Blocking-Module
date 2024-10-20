@@ -1,34 +1,39 @@
-body, html {
+body,
+html {
   font-family: "Poppins", Arial, sans-serif;
+  padding: 0.5rem;
 }
 
 .myButton {
   background-color: #00b144;
-  border-radius: 28px;
+  border-radius: 1rem;
   border: 1px solid #00b144;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Poppins", Arial, sans-serif;
   font-size: 17px;
   padding: 16px 31px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #00b144;
   outline-style: none;
 }
+
 .myButton:hover {
   background-color: #019530;
   outline-style: none;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
 }
+
 .myButton:active {
   position: relative;
   top: 1px;
   outline-style: none;
 }
+
 .accordion {
   box-sizing: border-box;
   display: flex;
-  font-family: "Poppins", Arial, sans-serif;
   overflow: hidden;
   width: 100%;
 }
@@ -70,18 +75,16 @@ body, html {
   transition: margin 0.3s ease 0.1s;
 }
 
-.accordion-select:checked + .accordion-title + .accordion-content {
+.accordion-select:checked+.accordion-title+.accordion-content {
   margin-bottom: 0;
   margin-right: 0;
 }
 
 /* Generated styles starts here */
-
 .accordion {
   border-color: #dedede;
-  border-radius: 0px;
-  border-style: solid;
-  border-width: 0px;
+  border-radius: 1rem;
+  border: 2px #7f8787 solid;
   flex-direction: column;
   height: auto;
 }
@@ -100,14 +103,11 @@ body, html {
   margin-right: -65px;
 }
 
-.accordion-title:not(:nth-last-child(2))::after {
-  border-bottom-color: #15ff58;
-  border-right-color: transparent;
-}
-
-.accordion-select:hover + .accordion-title,
-.accordion-select:checked + .accordion-title {
+.accordion-select:hover+.accordion-title,
+.accordion-select:checked+.accordion-title {
   background-color: #9dffa5;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
 }
 
 .accordion-title span {
@@ -133,6 +133,7 @@ body, html {
 #header {
   text-align: center;
 }
+
 @media (prefers-color-scheme: dark) {
   body {
     color: #eee;
