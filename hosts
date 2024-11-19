@@ -15,6 +15,75 @@ ff02::2         ip6-allrouters
 ff02::3         ip6-allhosts
 # END HEADER
 
+# BEGIN TEST SUBWAY ADS
+0.0.0.0 logging-gateway.vungle.io
+0.0.0.0 o-pxt.iads.unity3d.com
+0.0.0.0 html-uap2.iads.unity3d.com
+0.0.0.0 sp-02.mobidriven.com
+0.0.0.0 vast-events.inner-active.mobi
+0.0.0.0 files-02.mobidriven.com
+0.0.0.0 exchange-b-events.inner-active.mobi
+0.0.0.0 px880.telecid.ru
+0.0.0.0 1002--aefae90e-fac6-4674-90f1-e34af79bc8dd.stbid.ru
+0.0.0.0 px880ifwmns4e9bfn56.telecid.ru
+0.0.0.0 sdkopmetrics-eu.dsp-api.moloco.com
+0.0.0.0 tracker.zmaticoo.com
+0.0.0.0 encrypted-tbn3.gstatic.com
+0.0.0.0 encrypted-tbn0.gstatic.com
+0.0.0.0 o.isx.unity3d.com
+0.0.0.0 webview.unityads.unity3d.com
+0.0.0.0 mobile.pipe.aria.microsoft.com
+0.0.0.0 tr-us.adsmoloco.com
+0.0.0.0 i-sdk.mediation.unity3d.com
+0.0.0.0 o-sdk.mediation.unity3d.com
+0.0.0.0 cdn.iads.unity3d.com
+0.0.0.0 configv2.unityads.unity3d.com
+0.0.0.0 i-adq.mediation.unity3d.com
+0.0.0.0 noti-eu.adsmoloco.com
+0.0.0.0 unif-id.ssp.inmobi.com
+0.0.0.0 gw.mediation.unity3d.com
+0.0.0.0 ms.applovin.com
+0.0.0.0 d.applovin.com
+0.0.0.0 a4.applovin.com
+0.0.0.0 wv.inner-active.mobi
+0.0.0.0 cdn-creatives-cf-prd.acquire.unity3dusercontent.com
+0.0.0.0 o-iab-notifications.mediation.unity3d.com
+0.0.0.0 hbevents-public.mz.unity3d.com
+0.0.0.0 w.isx.unity3d.com
+0.0.0.0 o-iab-imp-counters.mediation.unity3d.com
+0.0.0.0 sts.applovin.com
+0.0.0.0 api.businessork.ru
+0.0.0.0 events.ads.vungle.com
+0.0.0.0 googleads.g.doubleclick.net
+0.0.0.0 o-adq.mediation.unity3d.com
+0.0.0.0 tr-eu.adsmoloco.com
+0.0.0.0 prod-a.applovin.com
+0.0.0.0 publisher-event.unityads.unity3d.com
+0.0.0.0 ae.iads.unity3d.com
+0.0.0.0 thind.unityads.unity3d.com
+0.0.0.0 api.audiencenet.ru
+0.0.0.0 gdl.tapulsads.ru
+0.0.0.0 sdkapi.dsp-api.moloco.com
+0.0.0.0 cdn-f.adsmoloco.com
+0.0.0.0 auction-load.unityads.unity3d.com
+0.0.0.0 noti-us.adsmoloco.com
+0.0.0.0 cdn2.inner-active.mobi
+0.0.0.0 prod-a.applovin.com
+0.0.0.0 wins.isprog.com
+0.0.0.0 cdn-store-icons-akamai-prd.unityads.unity3d.com
+0.0.0.0 a.applvn.com
+0.0.0.0 a.applovin.com
+0.0.0.0 tes.foisonad.com
+0.0.0.0 beacons.gcp.gvt2.com
+0.0.0.0 beacons.gvt2.com
+# Strong ADS!
+0.0.0.0 subway.prod.sybo.net
+0.0.0.0 httpkafka.unityads.unity3d.com
+0.0.0.0 o.iads.unity3d.com
+0.0.0.0 sdk-events.inner-active.mobi
+0.0.0.0 telemetry.sdk.inmobi.com
+# END TEST SUBWAY ADS
+
 # BEGIN BLOCKLIST
 0.0.0.0 0-02.net
 0.0.0.0 0.101tubeporn.com
