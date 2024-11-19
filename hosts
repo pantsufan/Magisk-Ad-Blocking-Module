@@ -16,6 +16,16 @@ ff02::3         ip6-allhosts
 # END HEADER
 
 # BEGIN TEST SUBWAY ADS
+0.0.0.0 img-dyn-uap.iads.unity3d.com
+0.0.0.0 aps-attribution.unityads.unity3d.com
+0.0.0.0 img.applovin.com
+0.0.0.0 res1.applovin.com
+0.0.0.0 prod-a-events.applovin.com
+0.0.0.0 prod-bid.applovin.com
+0.0.0.0 tagmediation.supersonicads.com
+0.0.0.0 e.axon.ai
+0.0.0.0 gateway.unityads.unity3d.com
+0.0.0.0 ms.applvn.com
 0.0.0.0 logging-gateway.vungle.io
 0.0.0.0 o-pxt.iads.unity3d.com
 0.0.0.0 html-uap2.iads.unity3d.com
@@ -71,7 +81,6 @@ ff02::3         ip6-allhosts
 0.0.0.0 prod-a.applovin.com
 0.0.0.0 wins.isprog.com
 0.0.0.0 cdn-store-icons-akamai-prd.unityads.unity3d.com
-0.0.0.0 a.applvn.com
 0.0.0.0 a.applovin.com
 0.0.0.0 tes.foisonad.com
 0.0.0.0 beacons.gcp.gvt2.com
