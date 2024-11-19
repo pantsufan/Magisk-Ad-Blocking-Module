@@ -77,7 +77,6 @@ ff02::3         ip6-allhosts
 0.0.0.0 beacons.gcp.gvt2.com
 0.0.0.0 beacons.gvt2.com
 # Strong ADS!
-0.0.0.0 subway.prod.sybo.net
 0.0.0.0 httpkafka.unityads.unity3d.com
 0.0.0.0 o.iads.unity3d.com
 0.0.0.0 sdk-events.inner-active.mobi
