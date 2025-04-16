@@ -24,7 +24,7 @@ The module was made for personal use but since it was really good for daily use 
 The module would be updated if there are any major changes to the host file.
 
 ## To Get Updates Faster Join The Telegram Channel
-[![Telegram Channel](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](t.me/SunilPatel23)
+[![Telegram Channel](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+GN1Bn642aNExYzI1)
 
 # Credits
 - [@topjohnwu](https://github.com/topjohnwu) for Magisk.
