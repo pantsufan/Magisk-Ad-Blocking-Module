@@ -9,8 +9,7 @@ The module was made for personal use but since it was really good for daily use 
 ![Downloads](https://shields.io/github/downloads/pantsufan/Magisk-Ad-Blocking-Module/total?style=for-the-badge)
 ![Release](https://shields.io/github/v/release/pantsufan/Magisk-Ad-Blocking-Module?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/pantsufan/Magisk-Ad-Blocking-Module?style=for-the-badge)
-[![Donate](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/kninja)
-
+[![Donate]
 # Features
 - Blocks Ads
 - Blocks Porn Sites
@@ -25,7 +24,7 @@ The module was made for personal use but since it was really good for daily use 
 The module would be updated if there are any major changes to the host file.
 
 ## To Get Updates Faster Join The Telegram Channel
-[![Telegram Channel](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/adsblocker)
+[![Telegram Channel](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+GN1Bn642aNExYzI1)
 
 # Credits
 - [@topjohnwu](https://github.com/topjohnwu) for Magisk.
