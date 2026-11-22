@@ -19,9 +19,13 @@ jobs:
 
     - name: Remove old file
       run: |
-          git rm hosts
-          git commit -m "Removed Host File"
-          git push origin master
+        git rm --ignore-unmatch -- hosts
+        if git diff --cached --quiet; then
+          echo "No hosts file to remove; skipping commit."
+        else
+        git commit -m "Removed Host File"
+        git push origin master
+        fi
     
     - name: Set up environment
       run: |
